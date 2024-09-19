@@ -263,7 +263,9 @@ function Photos() {
 
 export default async function Home() {
   let articles = (await getAllArticles()).slice(0, 4)
-
+  {
+    console.log(articles)
+  }
   return (
     <>
       <Container className="mt-9">
