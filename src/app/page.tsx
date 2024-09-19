@@ -81,14 +81,12 @@ function ArrowDownIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 function Article({ article }: { article: ArticleWithSlug }) {
   return (
     <Card as="article">
-      <Card.Title href={`/articles/${article.slug}`}>
-        {article.title}
-      </Card.Title>
-      <Card.Eyebrow as="time" dateTime={article.date} decorate>
+      <Card.Title href={`${article.slug}`}>{article.title}</Card.Title>
+      {/* <Card.Eyebrow as="time" dateTime={article.date} decorate>
         {formatDate(article.date)}
-      </Card.Eyebrow>
+      </Card.Eyebrow> */}
       <Card.Description>{article.description}</Card.Description>
-      <Card.Cta>Read article</Card.Cta>
+      <Card.Cta>Live Website</Card.Cta>
     </Card>
   )
 }
@@ -262,10 +260,41 @@ function Photos() {
 }
 
 export default async function Home() {
-  let articles = (await getAllArticles()).slice(0, 4)
-  {
-    console.log(articles)
-  }
+  let articles = [
+    {
+      slug: 'https://ieee-ucsc-madhack-4-0.vercel.app/',
+      author: 'Your Name',
+      date: '2024-09-19',
+      title: 'Concept Web Design for IEEE MADHACK Event',
+      description:
+        'Crafted the conceptual web interface for the IEEE MADHACK event, focusing on user experience and visual appeal.',
+    },
+    {
+      slug: 'https://tech.clofel.com/',
+      author: 'Your Name',
+      date: '2024-09-19',
+      title: 'Clofel Tech Official Website',
+      description:
+        'Developed the official website for Clofel Tech, showcasing their software solutions with a clean and professional design.',
+    },
+    {
+      slug: 'https://www.xleron.io/',
+      author: 'Your Name',
+      date: '2024-09-19',
+      title: 'Xleron Official Website',
+      description:
+        'Created the official website for Xleron, my startup software company, featuring an engaging and minimalist design.',
+    },
+    {
+      slug: 'https://erkescan.com/',
+      author: 'Your Name',
+      date: '2024-09-19',
+      title: 'ERKEScan Landing Page',
+      description:
+        'Designed the landing page for ERKEScan, a crypto SaaS product, with a focus on clarity and effective communication of features.',
+    },
+  ]
+
   return (
     <>
       <Container className="mt-9">
