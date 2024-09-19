@@ -9,10 +9,10 @@ export const metadata: Metadata = {
   title: {
     template: '%s - Spencer Sharp',
     default:
-      'Spencer Sharp - Software designer, founder, and amateur astronaut',
+      'Hashen Udara -    Founder, design-driven developer & lifelong learner',
   },
   description:
-    'I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms.',
+    'I’m Hashen, a design-driven developer and entrepreneur based in Sri Lanka. I am the co-founder of @xleron, where we create technologies that let people explore space in their own way.',
   alternates: {
     types: {
       'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
